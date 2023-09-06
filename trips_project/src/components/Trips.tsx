@@ -23,12 +23,13 @@ async function getTrips() {
 function Trips() {
 
     const [trips, setTrips] = useState<Trip[]>([]);
+    const [status, setStatus] = useState<boolean>(false);
 
     useEffect(() => {
         getTrips().then((res) => {
             setTrips(res)
         })
-    },[])    
+    },[status])    
 
 
 const myHeaders = new Headers();
@@ -48,6 +49,7 @@ const requestOptions:RequestInit = {
         .then(response => response.text())
         .then(result => console.log(result))
         .catch(error => console.log('error', error));
+        setStatus(true)
     }
  
 
