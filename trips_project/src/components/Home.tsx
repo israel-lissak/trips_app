@@ -6,8 +6,6 @@ function Home() {
   return (
         <>
             <h1>Home</h1>
-
-            <Link to="/">Home  </Link>
     
             <Link to="/allTrips">All trips  </Link>
     

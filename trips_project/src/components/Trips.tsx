@@ -31,16 +31,17 @@ function Trips() {
         })
     },[status])    
 
+    const token = localStorage.getItem('token');
 
-const myHeaders = new Headers();
-myHeaders.append("authorization", "test-token");
+    const myHeaders = new Headers();
+    myHeaders.append("authorization", token!);
 
 
-const requestOptions:RequestInit = {
-  method: 'DELETE',
-  headers: myHeaders,
-  redirect: 'follow'
-};
+    const requestOptions:RequestInit = {
+    method: 'DELETE',
+    headers: myHeaders,
+    redirect: 'follow'
+    };
 
 
 

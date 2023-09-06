@@ -21,8 +21,10 @@ function NewTripForm() {
 
     console.log(obj);
 
+    const token = localStorage.getItem('token');
+
     const myHeaders = new Headers();
-    myHeaders.append("authorization", "test-token");
+    myHeaders.append("authorization", token!);
     myHeaders.append("Content-Type", "application/json");
 
     const requestOptions:RequestInit = {
