@@ -67,6 +67,7 @@ const requestOptions:RequestInit = {
                     <img src={trip.image}/>
                     <button onClick={() => deleteTrip(trip.id)}>delete trip</button>
                     <Link to={`/tripDetails/${trip.id}`}>trip details</Link>
+                    <Link to={`/tripUpdate/${trip.id}`}>update trip</Link>
                 </div>
                 
             ))}
